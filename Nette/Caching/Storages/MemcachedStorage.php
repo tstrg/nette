@@ -58,7 +58,7 @@ class MemcachedStorage extends Nette\Object implements Nette\Caching\IStorage
 	}
 
 
-	public function addServer($host = 'localhost', $port = 11211, $timeout = 1)
+	public function addServer($host = 'localhost', $port = 11211, $timeout = 5)
 	{
 		if ($this->memcache->addServer($host, $port, TRUE, 1, $timeout) === FALSE) {
 			$error = error_get_last();
